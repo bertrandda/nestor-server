@@ -1,7 +1,7 @@
 const axios = require('axios');
 const moment = require('moment-timezone');
 
-exports.getTime = async function (req, res) {
+getTime = async function (req, res) {
     let time;
     let location;
     let timeZone;
@@ -18,18 +18,20 @@ exports.getTime = async function (req, res) {
     }
 
     if (req.body.nlp.entities.location) {
-        let json = await axios.get('https://api.timezonedb.com/v2/get-time-zone', {
-            params: {
-                key: process.env.TIMEZONEDB_API_KEY,
-                format: 'json',
-                by: 'position',
-                lat: req.body.nlp.entities.location[0].lat,
-                lng: req.body.nlp.entities.location[0].lng
-            }
-        })
-        timeZone = json.data.zoneName;
-        const splitLoc = req.body.nlp.entities.location[0].formatted.split(',');
-        location = splitLoc.length > 1 ? splitLoc[0] : timeZone.split('/')[1];
+        try {
+            const json = await getTimezone(req.body.nlp.entities.location[0].lat, req.body.nlp.entities.location[0].lng);
+            timeZone = json.data.zoneName;
+            const splitLoc = req.body.nlp.entities.location[0].formatted.split(',');
+            location = splitLoc.length > 1 ? splitLoc[0] : timeZone.split('/')[1];
+        } catch (error) {
+            console.log(error);
+            res.json({
+                replies: [
+                    { type: 'text', content: `Je vous prie de m'excuser, je n'arrive pas à accéder à ce fuseau horaire` }
+                ]
+            })
+            return;
+        }
     } else {
         timeZone = 'Europe/Paris';
         location = 'Paris';
@@ -40,4 +42,28 @@ exports.getTime = async function (req, res) {
             { type: 'text', content: `À ${location} il ${verbTime} ${time.tz(timeZone).format('HH:mm')}` }
         ]
     })
+}
+
+getTimezone = function (lat, lng) {
+    return new Promise(async (resolve, reject) => {
+        try {
+            const json = await axios.get('https://api.timezonedb.com/v2/get-time-zone', {
+                params: {
+                    key: process.env.TIMEZONEDB_API_KEY,
+                    format: 'json',
+                    by: 'position',
+                    lat: lat,
+                    lng: lng
+                }
+            })
+            resolve(json);
+        } catch (error) {
+            reject(error);
+        }
+    })
+}
+
+module.exports = {
+    getTime,
+    getTimezone
 }
