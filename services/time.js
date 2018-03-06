@@ -20,7 +20,7 @@ getTime = async function (req, res) {
     if (req.body.nlp.entities.location) {
         try {
             const json = await getTimezone(req.body.nlp.entities.location[0].lat, req.body.nlp.entities.location[0].lng);
-            timeZone = json.data.zoneName;
+            timeZone = json.zoneName;
             const splitLoc = req.body.nlp.entities.location[0].formatted.split(',');
             location = splitLoc.length > 1 ? splitLoc[0] : timeZone.split('/')[1];
         } catch (error) {
@@ -56,7 +56,7 @@ getTimezone = function (lat, lng) {
                     lng: lng
                 }
             })
-            resolve(json);
+            resolve(json.data);
         } catch (error) {
             reject(error);
         }
