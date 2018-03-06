@@ -4,6 +4,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const time = require('./services/time');
+const weather = require('./services/weather');
 
 const app = express();
 
@@ -12,6 +13,7 @@ app.use(bodyParser.json());
 app.get('/', (req, res) => res.send('Yes'));
 
 app.post('/time', time.getTime);
+app.post('/weather', weather.getWeather);
 
 app.post('/errors', (req, res) => {
     console.log(req.body);
