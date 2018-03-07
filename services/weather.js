@@ -27,7 +27,6 @@ const emojis = {
 exports.getWeather = async function (req, res) {
     const data = req.body;
     let replies = [];
-    let json;
     let lat, lng, place;
     if (data.nlp.entities.location) {
         lat = data.nlp.entities.location[0].lat;
@@ -47,18 +46,19 @@ exports.getWeather = async function (req, res) {
         await asyncForEach(datetimes, async (dt) => {
             if (dt.chronology === 'past')
                 replies.push({ type: 'text', content: `La date que vous avez entrez est dépassée` });
-            else if (dt.accuracy.split(',').reverse()[0] === 'now') {
+            else if (dt.accuracy && dt.accuracy.split(',').reverse()[0] === 'now') {
                 try {
-                    json = await getWeather('/weather', lat, lng);
+                    const json = await getOWeatherM('/weather', lat, lng);
                     replies.push({ type: 'text', content: `${capitalizeFirstLetter(json.weather[0].description)} à ${place || json.name}, la température est de ${json.main.temp}°C` });
                 } catch (err) {
                     console.log(err);
+                    replies.push({ type: 'text', content: `Je vous prie de m'excuser, je n'arrive pas à obtenir cette information` });
                 }
-            } else if (hoursAccuracies.includes(dt.accuracy.split(',').reverse()[0])) {
-                json = await time.getTimezone(lat, lng);
-                const localTime = (moment(dt.iso).valueOf() / 1000) - json.gmtOffset;
+            } else if (dt.accuracy && hoursAccuracies.includes(dt.accuracy.split(',').reverse()[0])) {
                 try {
-                    json = await getWeather('/forecast', lat, lng);
+                    let json = await time.getTimezone(lat, lng);
+                    const localTime = (moment(dt.iso).valueOf() / 1000) - json.gmtOffset;
+                    json = await getOWeatherM('/forecast', lat, lng);
                     hourForcasts = json.list;
                     const finalForecast = hourForcasts.filter(forecast => Math.abs(forecast.dt - localTime) < (1799 * 3))
                     if (finalForecast.length === 1)
@@ -69,11 +69,11 @@ exports.getWeather = async function (req, res) {
                     console.log(err);
                     replies.push({ type: 'text', content: `Je vous prie de m'excuser, je n'arrive pas à obtenir cette information` });
                 }
-            } else if (!hoursAccuracies.includes(dt.accuracy.split(',').reverse()[0])) {
-                json = await time.getTimezone(lat, lng);
-                const localTime = (moment(dt.iso).valueOf() / 1000) - json.gmtOffset + 12*3600;
+            } else if (dt.accuracy && !hoursAccuracies.includes(dt.accuracy.split(',').reverse()[0])) {
                 try {
-                    json = await getWeather('/forecast/daily', lat, lng, 16);
+                    let json = await time.getTimezone(lat, lng);
+                    const localTime = (moment(dt.iso).valueOf() / 1000) - json.gmtOffset + 12*3600;
+                    json = await getOWeatherM('/forecast/daily', lat, lng, 16);
                     dayForcasts = json.list;
                     const finalForecast = dayForcasts.filter(forecast => Math.abs(forecast.dt - localTime) < (1799 * 24))
                     if (finalForecast.length === 1)
@@ -90,22 +90,22 @@ exports.getWeather = async function (req, res) {
             replies: replies
         })
         return;
-    }
+    } else {
+        try {
+            json = await getOWeatherM('/weather', lat, lng);
+        } catch (err) {
+            console.log(err);
+        }
 
-    try {
-        json = await getWeather('/weather', lat, lng);
-    } catch (err) {
-        console.log(err);
+        res.json({
+            replies: [
+                { type: 'text', content: `${capitalizeFirstLetter(json.weather[0].description)} à ${place || json.name}, la température est de ${json.main.temp}°C` }
+            ]
+        })
     }
-
-    res.json({
-        replies: [
-            { type: 'text', content: `${capitalizeFirstLetter(json.weather[0].description)} à ${place || json.name}, la température est de ${json.main.temp}°C` }
-        ]
-    })
 }
 
-getWeather = function (route, lat, lng, cnt) {
+getOWeatherM = function (route, lat, lng, cnt) {
     /**
      * '/weather' Current weather
      * '/forecast' 3h/5days weather
@@ -138,6 +138,10 @@ function capitalizeFirstLetter(string) {
 
 async function asyncForEach(array, callback) {
     for (let index = 0; index < array.length; index++) {
-        await callback(array[index], index, array)
+        try {
+            await callback(array[index], index, array)
+        } catch (error) {
+            console.log(error);
+        }
     }
 }
