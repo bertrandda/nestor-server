@@ -1,0 +1,1172 @@
+[
+    {
+        "nameFr": "ail",
+        "type": "vegetable",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": "s",
+            "8": "s",
+            "9": "s",
+            "10": "s",
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "artichaut",
+        "type": "vegetable",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": "s",
+            "6": "s",
+            "7": "s",
+            "8": "s",
+            "9": "s",
+            "10": null,
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "asperge",
+        "type": "vegetable",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": "s",
+            "5": "s",
+            "6": "s",
+            "7": null,
+            "8": null,
+            "9": null,
+            "10": null,
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "aubergine",
+        "type": "vegetable",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": "s",
+            "7": "s",
+            "8": "s",
+            "9": "s",
+            "10": null,
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "betterave",
+        "type": "vegetable",
+        "month": {
+            "1": "s",
+            "2": "s",
+            "3": "s",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": null,
+            "10": "s",
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "blette",
+        "type": "vegetable",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": "s",
+            "7": "s",
+            "8": "s",
+            "9": "s",
+            "10": "s",
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "brocoli",
+        "type": "vegetable",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "s",
+            "10": "s",
+            "11": "s",
+            "12": null
+        }
+    },
+    {
+        "nameFr": "carotte",
+        "type": "vegetable",
+        "month": {
+            "1": "s",
+            "2": "s",
+            "3": "s",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "s",
+            "10": "s",
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "céleri",
+        "type": "vegetable",
+        "month": {
+            "1": "s",
+            "2": "s",
+            "3": "s",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": null,
+            "10": "s",
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "champignon de Paris",
+        "type": "vegetable",
+        "month": {
+            "1": "s",
+            "2": "s",
+            "3": "s",
+            "4": "s",
+            "5": "s",
+            "6": "s",
+            "7": "s",
+            "8": "s",
+            "9": "s",
+            "10": "s",
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "chou",
+        "type": "vegetable",
+        "month": {
+            "1": "s",
+            "2": "s",
+            "3": "s",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": null,
+            "10": "s",
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "chou de Bruxelles",
+        "type": "vegetable",
+        "month": {
+            "1": "s",
+            "2": "s",
+            "3": "s",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": null,
+            "10": "s",
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "chou-fleur",
+        "type": "vegetable",
+        "month": {
+            "1": "s",
+            "2": "s",
+            "3": "s",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "s",
+            "10": "s",
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "concombre",
+        "type": "vegetable",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": "s",
+            "6": "s",
+            "7": "s",
+            "8": "s",
+            "9": "s",
+            "10": "s",
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "courge",
+        "type": "vegetable",
+        "month": {
+            "1": "s",
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "s",
+            "10": "s",
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "courgette",
+        "type": "vegetable",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": "s",
+            "6": "s",
+            "7": "s",
+            "8": "s",
+            "9": "s",
+            "10": "s",
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "cresson",
+        "type": "vegetable",
+        "month": {
+            "1": "s",
+            "2": "s",
+            "3": "s",
+            "4": "s",
+            "5": "s",
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "s",
+            "10": "s",
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "échalote",
+        "type": "vegetable",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": null,
+            "10": "s",
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "endive",
+        "type": "vegetable",
+        "month": {
+            "1": "s",
+            "2": "s",
+            "3": "s",
+            "4": "s",
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": null,
+            "10": "s",
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "épinard",
+        "type": "vegetable",
+        "month": {
+            "1": "s",
+            "2": "s",
+            "3": "s",
+            "4": "s",
+            "5": "s",
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "s",
+            "10": "s",
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "fenouil",
+        "type": "vegetable",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": "s",
+            "5": null,
+            "6": "s",
+            "7": "s",
+            "8": "s",
+            "9": "s",
+            "10": "s",
+            "11": "s",
+            "12": null
+        }
+    },
+    {
+        "nameFr": "haricot vert",
+        "type": "vegetable",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": "s",
+            "7": "s",
+            "8": "s",
+            "9": "s",
+            "10": "s",
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "laitue",
+        "type": "vegetable",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": "s",
+            "6": "s",
+            "7": "s",
+            "8": "s",
+            "9": "s",
+            "10": null,
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "mâche",
+        "type": "vegetable",
+        "month": {
+            "1": "s",
+            "2": "s",
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": null,
+            "10": "s",
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "maïs",
+        "type": "vegetable",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": "s",
+            "8": "s",
+            "9": "s",
+            "10": null,
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "navet",
+        "type": "vegetable",
+        "month": {
+            "1": "s",
+            "2": "s",
+            "3": "s",
+            "4": "s",
+            "5": "s",
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": null,
+            "10": "s",
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "oignon",
+        "type": "vegetable",
+        "month": {
+            "1": "s",
+            "2": "s",
+            "3": "s",
+            "4": "s",
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "s",
+            "10": "s",
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "petit pois",
+        "type": "vegetable",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": "s",
+            "6": "s",
+            "7": "s",
+            "8": null,
+            "9": null,
+            "10": null,
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "panais",
+        "type": "vegetable",
+        "month": {
+            "1": "s",
+            "2": "s",
+            "3": "s",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": null,
+            "10": "s",
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "poireau",
+        "type": "vegetable",
+        "month": {
+            "1": "s",
+            "2": "s",
+            "3": "s",
+            "4": "s",
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "s",
+            "10": "s",
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "poivron",
+        "type": "vegetable",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": "s",
+            "7": "s",
+            "8": "s",
+            "9": "s",
+            "10": null,
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "potiron",
+        "type": "vegetable",
+        "month": {
+            "1": "s",
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "s",
+            "10": "s",
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "radis",
+        "type": "vegetable",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": "s",
+            "4": "s",
+            "5": "s",
+            "6": "s",
+            "7": null,
+            "8": null,
+            "9": null,
+            "10": null,
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "salsifis",
+        "type": "vegetable",
+        "month": {
+            "1": "s",
+            "2": "s",
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": null,
+            "10": null,
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "tomate",
+        "type": "vegetable",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": "s",
+            "7": "s",
+            "8": "s",
+            "9": "s",
+            "10": null,
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "topinambour",
+        "type": "vegetable",
+        "month": {
+            "1": "s",
+            "2": "s",
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": null,
+            "10": null,
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "abricot",
+        "type": "fruit",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": "s",
+            "7": "s",
+            "8": "s",
+            "9": null,
+            "10": null,
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "cassis",
+        "type": "fruit",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": "s",
+            "7": "s",
+            "8": "s",
+            "9": null,
+            "10": null,
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "cerise",
+        "type": "fruit",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": "s",
+            "7": "s",
+            "8": null,
+            "9": null,
+            "10": null,
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "châtaigne",
+        "type": "fruit",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": null,
+            "10": "s",
+            "11": "s",
+            "12": null
+        }
+    },
+    {
+        "nameFr": "citron",
+        "type": "fruit",
+        "month": {
+            "1": "s",
+            "2": "s",
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": null,
+            "10": null,
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "clémentine",
+        "type": "fruit",
+        "month": {
+            "1": "s",
+            "2": "s",
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": null,
+            "10": null,
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "coing",
+        "type": "fruit",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": null,
+            "10": "s",
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "figue",
+        "type": "fruit",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": "s",
+            "8": "s",
+            "9": "s",
+            "10": "s",
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "fraise",
+        "type": "fruit",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": "s",
+            "6": "s",
+            "7": "s",
+            "8": null,
+            "9": null,
+            "10": null,
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "framboise",
+        "type": "fruit",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": "s",
+            "7": "s",
+            "8": "s",
+            "9": null,
+            "10": null,
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "groseille",
+        "type": "fruit",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": "s",
+            "7": "s",
+            "8": "s",
+            "9": null,
+            "10": null,
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "kiwi",
+        "type": "fruit",
+        "month": {
+            "1": "s",
+            "2": "s",
+            "3": "s",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": null,
+            "10": null,
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "mandarine",
+        "type": "fruit",
+        "month": {
+            "1": "s",
+            "2": "s",
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": null,
+            "10": null,
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "melon",
+        "type": "fruit",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": "s",
+            "7": "s",
+            "8": "s",
+            "9": "s",
+            "10": null,
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "mirabelle",
+        "type": "fruit",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "s",
+            "9": "s",
+            "10": null,
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "mûre",
+        "type": "fruit",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "s",
+            "9": "s",
+            "10": null,
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "myrtille",
+        "type": "fruit",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": "s",
+            "8": "s",
+            "9": "s",
+            "10": null,
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "nectarine",
+        "type": "fruit",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": "s",
+            "8": "s",
+            "9": null,
+            "10": null,
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "noisette",
+        "type": "fruit",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "s",
+            "10": "s",
+            "11": "s",
+            "12": null
+        }
+    },
+    {
+        "nameFr": "noix",
+        "type": "fruit",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "s",
+            "10": "s",
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "orange",
+        "type": "fruit",
+        "month": {
+            "1": "s",
+            "2": "s",
+            "3": "s",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "s",
+            "10": null,
+            "11": null,
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "pamplemousse",
+        "type": "fruit",
+        "month": {
+            "1": null,
+            "2": "s",
+            "3": "s",
+            "4": "s",
+            "5": "s",
+            "6": "s",
+            "7": null,
+            "8": null,
+            "9": "s",
+            "10": null,
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "poire",
+        "type": "fruit",
+        "month": {
+            "1": "s",
+            "2": "s",
+            "3": "s",
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "s",
+            "9": "s",
+            "10": "s",
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "pomme",
+        "type": "fruit",
+        "month": {
+            "1": "s",
+            "2": "s",
+            "3": "s",
+            "4": "s",
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "s",
+            "9": "s",
+            "10": "s",
+            "11": "s",
+            "12": "s"
+        }
+    },
+    {
+        "nameFr": "prune",
+        "type": "fruit",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": "s",
+            "8": "s",
+            "9": "s",
+            "10": null,
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "quetsche",
+        "type": "fruit",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": "s",
+            "9": "s",
+            "10": "s",
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "raisin",
+        "type": "fruit",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "s",
+            "10": "s",
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "reine Claude",
+        "type": "fruit",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": null,
+            "5": null,
+            "6": null,
+            "7": null,
+            "8": null,
+            "9": "s",
+            "10": null,
+            "11": null,
+            "12": null
+        }
+    },
+    {
+        "nameFr": "rhubarbe",
+        "type": "fruit",
+        "month": {
+            "1": null,
+            "2": null,
+            "3": null,
+            "4": "s",
+            "5": "s",
+            "6": "s",
+            "7": null,
+            "8": null,
+            "9": null,
+            "10": null,
+            "11": null,
+            "12": null
+        }
+    }
+]
