@@ -8,10 +8,13 @@ const weather = require('./services/weather');
 const cook = require('./services/cook');
 
 const app = express();
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
 
+app.use(express.static(__dirname + '/client'));
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => res.send('Yes'));
+app.get('/', (req, res) => res.sendFile(__dirname + '/client/index.html'));
 
 app.post('/time', time.getTime);
 app.post('/weather', weather.getWeather);
@@ -22,5 +25,13 @@ app.post('/errors', (req, res) => {
     res.sendStatus(200);
 });
 
+io.on('connection', function (socket) {
+    socket.emit('reply', { text: 'Bonjour, je suis Nestor. Que puis-je faire pour vous ?' });
+
+    socket.on('request', function (data) {
+        socket.emit('reply', { text: 'Reply ' + data.text });
+    });
+});
+
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => console.log(`App start on port ${PORT}`));
+server.listen(PORT, () => console.log(`App start on port ${PORT}`));
