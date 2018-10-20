@@ -2,9 +2,14 @@
  * Insert bot response in terminal
  * @param {*} data bot response
  */
-function insertResponse(data) {
+function insertResponse(reply) {
     let terminal = document.getElementById('history');
-    terminal.innerHTML += `<p class="response">${data.text}</p>`;
+
+    reply.forEach(element => {
+        if (element.type === 'text') {        
+            terminal.innerHTML += `<p class="response">${element.content}</p>`;
+        }
+    });
 }
 
 /**

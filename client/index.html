@@ -20,7 +20,7 @@
         let socket = io();
 
         socket.on('reply', function (data) {
-            insertResponse(data);
+            insertResponse(data.reply);
         });
 
         /**

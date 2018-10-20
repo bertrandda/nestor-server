@@ -7,9 +7,12 @@ const time = require('./services/time');
 const weather = require('./services/weather');
 const cook = require('./services/cook');
 
+const recast = require('./src/recast');
+
 const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
+
 
 app.use(express.static(__dirname + '/client'));
 app.use(bodyParser.json());
@@ -26,10 +29,14 @@ app.post('/errors', (req, res) => {
 });
 
 io.on('connection', function (socket) {
-    socket.emit('reply', { text: 'Bonjour, je suis Nestor. Que puis-je faire pour vous ?' });
+    socket.emit('reply', { reply: [{ type: 'text', content: 'Bonjour, je suis Nestor. Que puis-je faire pour vous ?' }] });
 
     socket.on('request', function (data) {
-        socket.emit('reply', { text: 'Reply ' + data.text });
+        recast.dialog(socket.id, data.text, socket)
+    });
+
+    socket.on('disconnect', function () {
+        recast.deleteConversation(socket.id);
     });
 });
 
