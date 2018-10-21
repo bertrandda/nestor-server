@@ -29,14 +29,16 @@ app.post('/errors', (req, res) => {
 });
 
 io.on('connection', function (socket) {
+    let dialogCreated = false;
     socket.emit('reply', { reply: [{ type: 'text', content: 'Bonjour, je suis Nestor. Que puis-je faire pour vous ?' }] });
 
     socket.on('request', function (data) {
-        recast.dialog(socket.id, data.text, socket)
+        recast.dialog(socket.id, data.text, socket);
+        dialogCreated = true
     });
 
     socket.on('disconnect', function () {
-        recast.deleteConversation(socket.id);
+        if (dialogCreated) recast.deleteConversation(socket.id);
     });
 });
 
