@@ -8,6 +8,8 @@ function insertResponse(reply) {
     reply.forEach(element => {
         if (element.type === 'text') {        
             terminal.innerHTML += `<p class="response">${element.content}</p>`;
+        } else if (element.type === 'picture') {
+            terminal.innerHTML += `<div class="response-image"><img src="${element.content}" /></div>`
         }
     });
 }

@@ -42,3 +42,17 @@ p {
 .response {
     font-style: italic;
 }
+
+.response-image::before {
+    content: 'Nestor > ';
+    font-style: italic;
+    vertical-align: top;
+}
+
+.response-image {
+    max-height: 200px;
+}
+
+.response-image img {
+    max-height: inherit;
+}
