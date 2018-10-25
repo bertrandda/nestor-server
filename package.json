@@ -16,7 +16,7 @@
     "dotenv": "^5.0.1",
     "express": "^4.16.2",
     "moment-timezone": "^0.5.14",
-    "npm": "^5.7.1",
+    "npm": "^5.10.0",
     "recastai": "^4.0.0",
     "socket.io": "^2.1.1"
   }
