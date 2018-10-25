@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const time = require('./services/time');
 const weather = require('./services/weather');
 const cook = require('./services/cook');
+const wiki = require('./services/wiki');
 
 const recast = require('./src/recast');
 
@@ -20,6 +21,7 @@ app.use(bodyParser.json());
 app.get('/', (req, res) => res.sendFile(__dirname + '/client/index.html'));
 
 app.post('/time', time.getTime);
+app.post('/wiki-person', wiki.getWikiSummary);
 app.post('/weather', weather.getWeather);
 app.post('/vegfood', cook.getVegFood);
 
