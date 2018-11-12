@@ -13,7 +13,7 @@ const recast = require('./src/recast');
 const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server);
-
+io.origins([`${process.env.ORIGINS}`]);
 
 app.use(express.static(__dirname + '/client'));
 app.use(bodyParser.json());
@@ -36,7 +36,7 @@ io.on('connection', function (socket) {
 
     socket.on('request', function (data) {
         recast.dialog(socket.id, data.text, socket);
-        dialogCreated = true
+        dialogCreated = true;
     });
 
     socket.on('disconnect', function () {
