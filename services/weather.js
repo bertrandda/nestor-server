@@ -49,7 +49,7 @@ exports.getWeather = async function (req, res) {
             else if (dt.accuracy && dt.accuracy.split(',').reverse()[0] === 'now') {
                 try {
                     const json = await getOWeatherM('/weather', lat, lng);
-                    replies.push({ type: 'text', content: `${capitalizeFirstLetter(json.weather[0].description)} à ${place || json.name}, la température est de ${json.main.temp}°C` });
+                    replies.push({ type: 'text', content: `${emojis[json.weather[0].icon]} - ${capitalizeFirstLetter(json.weather[0].description)} à ${place || json.name}, la température est de ${json.main.temp}°C` });
                 } catch (err) {
                     console.log(err);
                     replies.push({ type: 'text', content: `Je vous prie de m'excuser, je n'arrive pas à obtenir cette information` });
@@ -62,7 +62,7 @@ exports.getWeather = async function (req, res) {
                     hourForcasts = json.list;
                     const finalForecast = hourForcasts.filter(forecast => Math.abs(forecast.dt - localTime) < (1799 * 3))
                     if (finalForecast.length === 1)
-                        replies.push({ type: 'text', content: `${capitalizeFirstLetter(dt.raw)} ${finalForecast[0].weather[0].description} à ${place || json.city.name}, la température sera de ${finalForecast[0].main.temp}°C` });
+                        replies.push({ type: 'text', content: `${emojis[finalForecast[0].weather[0].icon]} - ${capitalizeFirstLetter(dt.raw)} ${finalForecast[0].weather[0].description} à ${place || json.city.name}, la température sera de ${finalForecast[0].main.temp}°C` });
                     else
                         replies.push({ type: 'text', content: `Je vous prie de m'excuser, je n'arrive pas à obtenir cette information` });
                 } catch (err) {
@@ -77,7 +77,7 @@ exports.getWeather = async function (req, res) {
                     dayForcasts = json.list;
                     const finalForecast = dayForcasts.filter(forecast => Math.abs(forecast.dt - localTime) < (1799 * 24))
                     if (finalForecast.length === 1)
-                        replies.push({ type: 'text', content: `${capitalizeFirstLetter(dt.raw)} ${finalForecast[0].weather[0].description} à ${place || json.city.name}, la température sera de ${finalForecast[0].temp.day}°C` });
+                        replies.push({ type: 'text', content: `${emojis[finalForecast[0].weather[0].icon]} - ${capitalizeFirstLetter(dt.raw)} ${finalForecast[0].weather[0].description} à ${place || json.city.name}, la température sera de ${finalForecast[0].temp.day}°C` });
                     else
                         replies.push({ type: 'text', content: `Je vous prie de m'excuser, je n'arrive pas à obtenir cette information` });
                 } catch (err) {
@@ -99,7 +99,7 @@ exports.getWeather = async function (req, res) {
 
         res.json({
             replies: [
-                { type: 'text', content: `${capitalizeFirstLetter(json.weather[0].description)} à ${place || json.name}, la température est de ${json.main.temp}°C` }
+                { type: 'text', content: `${emojis[json.weather[0].icon]} - ${capitalizeFirstLetter(json.weather[0].description)} à ${place || json.name}, la température est de ${json.main.temp}°C` }
             ]
         })
     }
