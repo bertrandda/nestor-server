@@ -15,10 +15,7 @@ const server = require('http').createServer(app);
 const io = require('socket.io')(server);
 io.origins([`${process.env.ORIGINS}`]);
 
-app.use(express.static(__dirname + '/client'));
 app.use(bodyParser.json());
-
-app.get('/', (req, res) => res.sendFile(__dirname + '/client/index.html'));
 
 app.post('/time', time.getTime);
 app.post('/wiki-person', wiki.getWikiSummary);
@@ -42,6 +39,12 @@ io.on('connection', function (socket) {
     socket.on('disconnect', function () {
         if (dialogCreated) recast.deleteConversation(socket.id);
     });
+});
+
+app.get('*', function (req, res) {
+    if (process.env.REDIRECT_404_URL) {
+        res.redirect(process.env.REDIRECT_404_URL);
+    }
 });
 
 const PORT = process.env.PORT || 5000;
