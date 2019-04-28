@@ -1,4 +1,4 @@
-# react-server
+# nestor-server
 Server for Nestor, a virtual assistant build with [Recast.AI](https://recast.ai)
 
 ## Features 🇫🇷
@@ -63,7 +63,7 @@ In Nestor settings (your bot page), set `Bot webhook base URL` with the new valu
 
 ### Custom client
 
-You can use [react-nestor-client](https://github.com/bertrandda/react-nestor-client), a minimalist client to talk with Nestor. Try it on [this website]('https://bertranddaure.fr').
+You can use [react-nestor-client](https://github.com/bertrandda/react-nestor-client), a minimalist client to talk with Nestor.
 
 ### Bot connector
 
